@@ -1,0 +1,82 @@
+// Saeem Ashraf
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scnr = new Scanner(System.in);
+       
+       final double unitPrice = 50;
+       double gross;
+       double discount0 = 0;
+       double discount2;
+       double discount3;
+       double discount4;
+       double discount5;
+       double priceFinal;
+       
+       System.out.println("Enter the number of units you would like to purchase: ");
+       double unitsBought = scnr.nextDouble();
+       
+       gross = unitsBought * unitPrice;
+       
+     if ( unitsBought < 10){
+         
+         System.out.printf("The gross total is $%,.2f.%n", gross);
+         System.out.printf("The discount total is $%,.2f.%n", discount0);
+         System.out.printf("The final total is $%,.2f.%n", gross);
+         
+     }
+     
+     else if (unitsBought >= 10 && unitsBought <= 19){
+         
+         gross = unitsBought * unitPrice;
+         discount2 = gross * .2;
+         priceFinal = gross - discount2;
+         
+         System.out.printf("The gross total is $%,.2f.%n", gross);
+         System.out.printf("The discount total is $%,.2f.%n", discount2);
+         System.out.printf("The final total is $%,.2f.%n", priceFinal);
+         
+     }
+
+    else if (unitsBought >= 20 && unitsBought <= 49) {
+        
+        gross = unitsBought * unitPrice;
+        discount3 = gross * .3;
+        priceFinal = gross - discount3;
+        
+         System.out.printf("The gross total is $%,.2f.%n", gross);
+         System.out.printf("The discount total is $%,.2f.%n", discount3);
+         System.out.printf("The final total is $%,.2f.%n", priceFinal); 
+        
+    }
+    
+    else if (unitsBought >= 50 && unitsBought <= 99 ){
+        
+        gross = unitsBought * unitPrice;
+        discount4 = gross * .4;
+        priceFinal = gross - discount4;
+      
+         System.out.printf("The gross total is $%,.2f.%n", gross);
+         System.out.printf("The discount total is $%,.2f.%n", discount4);
+         System.out.printf("The final total is $%,.2f.%n", priceFinal); 
+        
+    }
+    
+    else if ( unitsBought >= 100){
+        
+        gross = unitsBought * unitPrice;
+        discount5 = gross * .5;
+        priceFinal = gross - discount5;
+        
+        System.out.printf("The gross total is $%,.2f.%n", gross);
+        System.out.printf("The discount total is $%,.2f.%n", discount5);
+        System.out.printf("The final total is $%,.2f.%n", priceFinal);
+    }
+    
+    else {
+        
+        System.out.println("Please enter a  number.");
+    }
+        
+    }
+}
